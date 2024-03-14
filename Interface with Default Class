@@ -1,0 +1,41 @@
+interface Exam{
+void examSpring();
+void examSummer();
+void examFall();
+
+default void displayDemo() {
+        System.out.println("Printed demo method from Exam interface.");
+    }
+}
+
+ abstract class Spring implements Exam{
+
+   public void examSpring(){
+       System.out.println("Abstract method  examSpring() Implements from Spring class.");
+    }
+}
+
+ abstract class Summer extends Spring{
+    
+    public void examSummer(){ 
+        System.out.println("Abstract method  examSummer() Implements from Summer class.");
+    }
+   // abstract void examFall();rest of the unimplemented method
+}
+
+class Sanowar extends Summer {
+    public void examFall() {
+        System.out.println("Finally Implemented exFall method");
+    }
+}
+class TestInterface {
+    public static void main(String[] args) {
+
+        Sanowar sanowar = new Sanowar();
+        
+        sanowar.displayDemo();
+        sanowar.examSpring();
+        sanowar.examSummer();
+        sanowar.examFall();
+    }
+}

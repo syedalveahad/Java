@@ -1,0 +1,24 @@
+interface Exam{
+     void examSpring();
+     void examSummer();
+     void examFall();
+    default void displayDemo(){System.out.println("Display demo "); }
+}
+abstract class Spring implements Exam{
+    public void examSpring(){System.out.println("spring"); }
+}
+abstract class Summer extends Spring{
+    public void examSummer(){System.out.println("summer"); }
+}
+class Moumi extends Summer{
+    public void examFall(){System.out.println("Fall"); }
+}
+class Test{
+    public static void main(String[] args){
+        Moumi s1=new Moumi();
+        s1.displayDemo();
+        s1.examSpring();
+        s1.examSummer();
+        s1.examFall();
+    }
+}

@@ -1,0 +1,19 @@
+class Car{
+String model;
+String year;
+Car(){model="Porshe GT22"; year="2022";}
+Car(String model, String year){this.model=model; this.year=year;}
+
+void displayinfo(){System.out.println("Model: "+model+"\n"+"Year: "+year+"\n");}
+void accelerate(int speed){System.out.println("This car can go "+speed+" miles per hour");}
+public static void main(String [] args)
+{
+Car obj1=new Car();
+Car obj2=new Car("BMW i8","2016");
+
+
+obj1.displayinfo();
+obj2.displayinfo();
+obj2.accelerate(200);
+}  
+}

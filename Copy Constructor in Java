@@ -1,0 +1,16 @@
+class CopyCon{
+int age;
+String name;
+
+CopyCon(int x, String y){age=x; name=y;}
+CopyCon(CopyCon a){age=a.age; name=a.name;}
+
+void message(){System.out.println("Age: "+age+"\n"+"Name: "+name);}
+public static void main(String [] args)
+{
+CopyCon obj1=new CopyCon(24,"AAA");
+CopyCon obj2=new CopyCon(obj1);
+obj1.message();
+obj2.message();
+}  
+}

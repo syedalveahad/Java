@@ -1,0 +1,20 @@
+class Calculation {  int z;
+   public void addition(int x, int y) {      z = x + y;
+      System.out.println("Summation:"+z);
+   }	
+   public void Subtraction(int x, int y) { z = x - y;
+      System.out.println("Subtraction:"+z);
+   }
+}
+public class MainClass extends Calculation {
+   public void multiplication(int x, int y) {   z = x * y;
+      System.out.println("Multiplication:"+z);
+   }	
+   public static void main(String args[]) {
+      int a = 5, b = 10;
+      MainClass obj1 = new MainClass();
+      obj1.addition(a, b);
+      obj1.Subtraction(a, b);
+      obj1.multiplication(a, b);
+   }
+}

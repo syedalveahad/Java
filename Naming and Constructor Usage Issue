@@ -1,0 +1,28 @@
+public class People {
+
+    int age;
+    String name;
+
+    public People() {
+        this(30, "Hello");
+    }
+
+   
+    public People(int age, String name) {
+        this.age = age;
+        this.name = name;
+System.out.println("Name:"+name+"\n"+"Age:"+age);
+    }
+
+    public String Hello(String x) {
+        String message = x;
+        return message;
+    }
+
+    public static void main(String[] args) {
+        
+       People person = new People();
+       String a= person.Hello("Print It");
+       System.out.println(a);
+    }
+}
